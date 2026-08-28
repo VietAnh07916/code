@@ -1,3 +1,6 @@
+Họ và tên: Nguyễn Thanh Huyền
+Nội dung:
+Giới thiệu về lập trình hướng đối tượng
 Đối tượng (Object): Thực thể bao gồm thuộc tính (dữ liệu) và phương thức (hành vi).
 Lớp (Class): Bản thiết kế hoặc khuôn mẫu để tạo ra các đối tượng.
 Đóng gói (Encapsulation): Che giấu thông tin chi tiết bên trong và chỉ lộ ra những gì cần thiết.
