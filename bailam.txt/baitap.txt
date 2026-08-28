@@ -1,2 +1,109 @@
 
 Tên : Lê Việt Dũng 
+Nhóm 9
+Công việc : Tìm hiểu về lớp và đối tượng 
+
+
+Lớp :
+=Là sự mở rộng của các khái niệm cấu trúc của C và bản ghi của Pascal 
+-Chứa các thành phần hàm (Phương thức hay hàm thành viên)
+class Tên_lớp {
+    //Khai báo các thành phần dữ liệu (thuộc tính)
+    //Khai báo các phương thức 
+
+}
+
+
+
+
+Định nghĩa các phương thức
+- Thuộc tính của lớp thuộc các kiểu dữ liệu cơ sở, cấu trúc, con trỏ
+- Thuộc tính không có kiểu của chính lớp đó, nhưng có kiểu con trỏ của chính lớp đó
+- Dùng private và public để quy định phạm vi sử dụng, nếu không quy định thì mặc định là private
+- Các thành phần private chỉ được sử dụng bên trong lớp (trong thân các phương thức của lớp)
+- Các phương thức có thể xây dựng bên trong hoặc bên ngoài định nghĩa lớp
+- Giá trị trả về của phương thức có thể có kiểu bất kỳ
+
+ Biến, mảng và con trỏ đối tượng
+
+-Khai báo & truy cập: Khai báo biến/mảng bằng Tên_lớp danh_sách; và truy cập thành phần bằng toán tử . (ví dụ: biến.thuộc_tính)
+
+-Con trỏ đối tượng: Khai báo bằng toán tử con trỏ * và truy cập thành phần bằng toán tử truy xuất -> (ví dụ: con_trỏ->phương_thức)
+
+-Con trỏ this: Đóng vai trò là tham số thứ nhất của phương thức, lưu địa chỉ của chính đối tượng đang gọi phương thức đó
+
+
+
+Hàm (Function) & Hàm bạn (Friend Function)
+
+-Hàm thường: Có phạm vi toàn chương trình, tham số có thể là đối tượng nhưng thân hàm không được truy cập trực tiếp các thuộc tính private
+
+-Hàm bạn (friend): Khai báo bằng từ khóa friend. Không phải phương thức của lớp nhưng được phép truy cập trực tiếp thuộc tính private của đối tượng thuộc lớp đó. Một hàm có thể là bạn của nhiều lớp
+
+Hàm tạo (Constructor) & Hàm hủy (Destructor)
+
+-Hàm tạo (Constructor): Phương thức khởi tạo đối tượng, tên trùng tên lớp, không có kiểu trả về. Lớp có thể có nhiều hàm tạo (nếu không khai báo, chương trình sẽ tự sinh hàm tạo mặc định)
+
+-Hàm tạo sao chép (Copy Constructor): Khởi tạo đối tượng mới từ một đối tượng đã có dạng Tên_lớp(const Tên_lớp &đối_tượng). Bắt buộc phải tự xây dựng nếu lớp có thuộc tính con trỏ/tham chiếu
+
+-Hàm hủy (Destructor): Gọi khi giải phóng đối tượng (~Tên_lớp()), cần thiết khi lớp sử dụng dữ liệu động
+
+
+
+Chồng toán tử (Operator Overloading)
+
+-Định nghĩa: Định nghĩa lại ý nghĩa của các toán tử có sẵn cho các kiểu dữ liệu lớp do người dùng tự định nghĩa
+
+-Cú pháp: Sử dụng từ khóa operator theo sau là kí hiệu toán tử (type operator op_symbol (parameters))
+
+-Các toán tử hỗ trợ: Hầu hết các toán tử số học, so sánh, gán, con trỏ, cấp phát (như +, -, *, /, ==, !=, =, [], (), new, delete...)
+
+
+
+-Các giới hạn của chồng toán tử
+
+-Toán tử KHÔNG THỂ chồng: Có 5 toán tử không thể định nghĩa lại: toán tử truy cập thành phần ., toán tử con trỏ thành phần .*, toán tử phạm vi ::, toán tử điều kiện ?:, và toán tử kích thước sizeof
+
+Cài đặt hàm toán tử:
+
+-Nếu là hàm thành viên: Toán hạng cực trái phải là đối tượng của lớp đó
+
+-Nếu không phải hàm thành viên (thường dùng hàm friend): Toán hạng bên trái có thể là đối tượng của lớp khác hoặc kiểu dữ liệu có sẵn
+
+
+
+Quy tắc cho các loại toán tử
+
+-Toán tử 1 ngôi (Unary Operators):
+
+-Định nghĩa là hàm thành viên: Là hàm không tĩnh, không nhận tham số nào
+
+-Định nghĩa là hàm không thành viên: Nhận 1 tham số
+
+-Các toán tử tiêu biểu: +, -, *, &, ~, !, ++, --.
+
+-Toán tử 2 ngôi (Binary Operators):
+
+-Định nghĩa là hàm thành viên: Là hàm không tĩnh, nhận 1 tham số
+
+-Định nghĩa là hàm không thành viên: Nhận 2 tham số
+
+-Các toán tử tiêu biểu: Số học (+, -, *, /, %), So sánh (==, !=, <, >), Gán (=, +=, -=), Logic (&&, ||)
+
+
+
+Các trường hợp và toán tử đặc biệt
+
+-Toán tử Nhập/Xuất (<< và >>):
+
+-Toán hạng trái phải là dạng tham chiếu luồng ostream& hoặc istream&
+
+-Không được là hàm thành viên của lớp (phải dùng hàm tự do/hàm friend)
+
+-Toán tử truy cập chỉ số [] và Gọi hàm ():
+
+-Bắt buộc phải là hàm thành viên của lớp
+
+-[] đóng vai trò toán tử 2 ngôi dạng a[b]
+
+-() có 2 toán hạng: toán hạng thứ nhất là tên hàm, toán hạng thứ hai là danh sách tham số
