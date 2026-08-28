@@ -6,8 +6,6 @@ Nội dung về các mở rộng của C++ từ các hình ảnh trên bao gồm
 * Chú thích nhiều dòng: `/* chú thích */`
 * Chú thích trên một dòng: `// chú thích trên một dòng`
 
-
-
 **2. Mở rộng về `struct` và `union**`
 
 * Trong C++, `struct` và `union` thực sự là các kiểu `class`.
