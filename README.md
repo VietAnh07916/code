@@ -1,6 +1,6 @@
 Các Thành Viên :  
 
--Nguyên Việt Anh : Nhóm trưởng  
+-Nguyễn Việt Anh : Nhóm trưởng  
 
 -Lê Việt Dũng  
 
